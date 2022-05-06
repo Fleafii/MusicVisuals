@@ -4,7 +4,7 @@
 Name: Fiachra Dowling
 Student Number: C20729449
 
-Name: Micolaj Chanas
+Name: Mikolaj Chanas
 Student Number: C20724761
 
 # Video Of Our Visualisations
@@ -29,8 +29,11 @@ so when visual.draw() is called again the Cube object will now be drawn instead 
 
 
 # What I am most proud of in the assignment
-The part of the project I’m most happy with is the RotatingBands pattern, which I adapted from the 
-starter code patterns. I added the Cuboids in circles to the pattern and added rotation and color changes 
-based on the audio input buffer. This was a bit hard at first to calculate the logic, but I managed to do it 
-properly in the end. It also changes the cuboid height according to the audio input
+The part of the project we are most happy with is the RotatingBands pattern,
+ which I adapted from the starter code patterns. I added the Cuboids in circles 
+to the pattern and added rotation and color changes based on the audio input buffer.
+ This was a bit hard at first to calculate the logic, but we managed to do it properly
+ in the end. It also changes the cuboid height according to the audio input
+
+ [rotating.bands](images/rotating_bands.png)
 
