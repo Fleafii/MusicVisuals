@@ -7,15 +7,12 @@ import java.util.ArrayList;
 import ddf.minim.AudioPlayer;
 import ie.tudublin.*;
 import ie.tudublin.Visual;
-import processing.core.*;
 
 
     
 
     public class Visuals extends Visual
-{    
-    ArrayList<Visual> master = new ArrayList<Visual>();
-
+{
    // Lights light;
     Line line;
     Cube cube;
@@ -35,11 +32,6 @@ import processing.core.*;
     {
         size(1024, 1000,P3D);
         
-        // Use this to make fullscreen
-        //fullScreen();
-
-        // Use this to make fullscreen and use P3D for 3D graphics
-        //fullScreen(P3D, SPAN); 
     }
 
     public void setup()
@@ -51,14 +43,6 @@ import processing.core.*;
         player = this.getAudioPlayer();
         
         
-        //minim = new Minim(this);
-        //player = minim.loadFile("Mario.mp3");  
-        //player.loop();
-
-        // Call this instead to read audio from the microphone
-        //startListening(); 
-        
-        //light = new Lights(this);
         circle = new Circle(this);
         line = new Line(this);
         cube = new Cube(this);
@@ -80,11 +64,11 @@ import processing.core.*;
         }
         if (key == '1')
         {
-            visual=cube;
+            visual=line;
         }
         if (key == '2')
         {
-            visual=line;
+            visual=cube;
         }
         if (key == '3')
         {
@@ -123,8 +107,7 @@ import processing.core.*;
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();
         visual.draw();
-        spiral.draw();
-        spec.draw();
+       
         
     }
 }

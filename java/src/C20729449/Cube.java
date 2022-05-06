@@ -1,9 +1,6 @@
 package C20729449;
 
 import ie.tudublin.Visual;
-import processing.core.*;
-
-import ddf.minim.analysis.FFT;
 import processing.core.PApplet;
 
 public class Cube extends Visual {
@@ -13,14 +10,11 @@ public class Cube extends Visual {
     float angle = 0;
 
     Visuals mv;
-    float cy = 0;
-    float cx = 0;
+   
 
     public Cube(Visuals mv)
     {
         this.mv = mv;
-        cy = this.mv.height / 2;
-        cx = this.mv.width /2;
     }
 
     public void draw() {

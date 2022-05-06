@@ -1,10 +1,6 @@
 package C20729449;
 
 import ie.tudublin.Visual;
-import processing.core.*;
-
-import ddf.minim.analysis.FFT;
-import processing.core.PApplet;
 
 public class Circle extends Visual {
 
@@ -13,14 +9,11 @@ public class Circle extends Visual {
     float angle = 0;
 
     Visuals mv;
-    float cy = 0;
-    float cx = 0;
+    
 
     public Circle(Visuals mv)
     {
         this.mv = mv;
-        cy = this.mv.height / 2;
-        cx = this.mv.width /2;
     }
 
     int radius = 200;

@@ -1,39 +1,19 @@
 package C20729449;
-import ie.tudublin.Visual;
-import processing.core.*;
 
-import ddf.minim.analysis.FFT;
+import ie.tudublin.Visual;
 import processing.core.PApplet;
 
-/*
-
-The infinite number of waves make up the mind, and all minds are made up of these waves which then interact with one another to form reality via Fourier transformations
-Science is not supposed to give meaning to ones life or the reason behind their existence; science only explains the testable and provable mechanisms that run the universe
-
-*/
 
 public class Line extends Visual
 {
     Visuals mv;
-    float cy = 0;
-    float cx = 0;
 
     public Line(Visuals mv)
     {
         this.mv = mv;
-        cy = this.mv.height / 2;
-        cx = this.mv.width /2;
     }
 
     int mode = 0;
-
-    float[] lerpedBuffer;
-    float y = 0;
-    float smoothedY = 0;
-    float smoothedAmplitude = 0;
-
-    FFT fft;
-    float off = 0;
     float average = 0;
 
     public void draw()

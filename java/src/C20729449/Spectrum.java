@@ -1,10 +1,6 @@
 package C20729449;
 
 import ie.tudublin.Visual;
-import processing.core.*;
-
-import ddf.minim.analysis.FFT;
-import processing.core.PApplet;
 
 public class Spectrum extends Visual {
 
