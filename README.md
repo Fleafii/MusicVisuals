@@ -1,20 +1,18 @@
 # Music Visualiser Project
 
-Name:
+# Group Members
+Name: Fiachra Dowling
+Student Number: C20729449
 
-Student Number: 
+Name: Micolaj Chanas
+Student Number: C20724761
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+The App we made plays a piece of music and visualises it to the screen. simple shapes are drawn to the screen . then based on the amplitude of the beat we have made it so they change shape, colour , intensity or movement speed.
 
 # Instructions
-
+start the program by running main.java 
 # How it works
 
 # What I am most proud of in the assignment

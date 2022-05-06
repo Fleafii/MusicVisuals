@@ -28,7 +28,7 @@ import ie.tudublin.Visual;
 
     public void settings()
     {
-        size(1024, 1000,P3D);
+        size(1024, 860,P3D);
         
     }
 
@@ -37,7 +37,7 @@ import ie.tudublin.Visual;
         setFrameSize(1024);
         frameRate(60);
 
-        
+
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
