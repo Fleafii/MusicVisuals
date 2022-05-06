@@ -5,10 +5,10 @@ import ie.tudublin.Visual;
 public class Circle extends Visual {
 
 
-    Visuals mv;
+    Runner mv;
     
 
-    public Circle(Visuals mv)
+    public Circle(Runner mv)
     {
         this.mv = mv;
     }

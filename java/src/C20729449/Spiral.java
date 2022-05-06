@@ -5,10 +5,10 @@ import ie.tudublin.Visual;
 
 public class Spiral extends Visual {
 
-    Visuals mv;
+    Runner mv;
 
 
-    public Spiral(Visuals mv)
+    public Spiral(Runner mv)
     {
         this.mv = mv;
     }

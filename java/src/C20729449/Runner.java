@@ -9,7 +9,7 @@ import ie.tudublin.Visual;
 
     
 
-    public class Visuals extends Visual
+    public class Runner extends Visual
 {
     // creates the varrible to store the objects
     Line line;

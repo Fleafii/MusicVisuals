@@ -4,9 +4,9 @@ import ie.tudublin.Visual;
 
 public class RotatingBands extends Visual {
 
-    Visuals mv;
+    Runner mv;
 
-    public RotatingBands(Visuals mv)
+    public RotatingBands(Runner mv)
     {
         this.mv = mv;
   

@@ -9,10 +9,10 @@ public class Cube extends Visual {
     float smoothedBoxSize = 0;
     float angle = 0;
 
-    Visuals mv;
+    Runner mv;
    
 
-    public Cube(Visuals mv)
+    public Cube(Runner mv)
     {
         this.mv = mv;
     }

@@ -6,9 +6,9 @@ import processing.core.PApplet;
 
 public class Line extends Visual
 {
-    Visuals mv;
+    Runner mv;
 
-    public Line(Visuals mv)
+    public Line(Runner mv)
     {
         this.mv = mv;
     }

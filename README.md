@@ -12,8 +12,14 @@ Student Number: C20724761
 The App we made plays a piece of music and visualises it to the screen. simple shapes are drawn to the screen . then based on the amplitude of the beat we have made it so they change shape, colour , intensity or movement speed.
 
 # Instructions
-start the program by running main.java 
+Start the program by running main.java.
+The default visual is set to key 1
+Press spacebar to start the music or restart the song.
+Keys 1 - 6 change which visual is presented on screen.
+
 # How it works
+The main visuals.java file is called when main starts.
+6 objects are made in the visuals class (Circle,Cube,Line,RotatingBands,Spectrum,Spiral) each of these classes are also subclasses of visual. 
 
 # What I am most proud of in the assignment
 

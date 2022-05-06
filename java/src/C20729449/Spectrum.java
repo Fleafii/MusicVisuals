@@ -7,11 +7,11 @@ public class Spectrum extends Visual {
     
     int radius = 150;
 
-    Visuals mv;
+    Runner mv;
     float cy = 0;
     float cx = 0;
 
-    public Spectrum(Visuals mv)
+    public Spectrum(Runner mv)
     {
         this.mv = mv;
         cy = this.mv.height / 2;
