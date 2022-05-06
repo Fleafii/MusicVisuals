@@ -64,9 +64,9 @@ public void render()
 	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
 	ui.text(text, x + width * 0.5f, y + height * 0.5f);
 }
-```
+```image
 
-This is an image using a relative URL:
+This is an  using a relative URL:
 
 ![An image](images/p8.png)
 

@@ -1,0 +1,204 @@
+package ie.tudublin;
+
+import ddf.minim.AudioBuffer;
+import ddf.minim.AudioInput;
+import ddf.minim.AudioPlayer;
+import ddf.minim.Minim;
+import ddf.minim.analysis.FFT;
+import processing.core.PApplet;
+
+/*
+
+The infinite number of waves make up the mind, and all minds are made up of these waves which then interact with one another to form reality via Fourier transformations
+Science is not supposed to give meaning to ones life or the reason behind their existence; science only explains the testable and provable mechanisms that run the universe
+
+*/
+
+public class Audio2 extends PApplet
+{
+    Minim minim;
+    AudioPlayer ap;
+    AudioInput ai;
+    AudioBuffer ab;
+
+    int mode = 0;
+
+    float[] lerpedBuffer;
+    float y = 0;
+    float smoothedY = 0;
+    float smoothedAmplitude = 0;
+
+    FFT fft;
+
+    public void keyPressed() {
+		if (key >= '0' && key <= '9') {
+			mode = key - '0';
+		}
+		if (keyCode == ' ') {
+            if (ap.isPlaying()) {
+                ap.pause();
+            } else {
+                ap.rewind();
+                ap.play();
+            }
+        }
+	}
+
+    public void settings()
+    {
+        size(1024, 1000, P3D);
+        //fullScreen(P3D, SPAN);
+    }
+
+    public void setup()
+    {
+        minim = new Minim(this);
+        // Uncomment this to use the microphone
+        //ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
+        //ab = ai.mix; 
+        ap = minim.loadFile("heroplanet.mp3", 1024);
+        ap.play();
+        ab = ap.mix;
+        colorMode(RGB);
+
+        fft = new FFT(1024, 44100);
+
+        y = height / 2;
+        smoothedY = y;
+
+        lerpedBuffer = new float[width];
+    }
+
+    float off = 0;
+
+    public void draw()
+    {
+        background(0);
+        stroke(255);
+
+        fft.window(FFT.HAMMING);
+        fft.forward(ab);
+        
+        float halfH = height / 2;
+        float c20 = 0;
+        int maxIndex = 0;
+        
+        //lights    //change for loop 
+
+        
+
+        int k = 0; //alternate varible then i 
+        for(int i = 0 ; i < ab.size()-1 ; i += 20)
+        {   
+            float c = map(ab.get(i), 0, ab.size(), 0, 255);
+            float c1 = map(i, 0, ab.size(), 0, 255);
+            float c2 = map(ab.get(i)*100,0,ab.size(),0,255);
+            float c4 = map(ab.get(i), -1, 1, 0, 255);
+            
+
+           
+
+        for(int j = 0 ; j < fft.specSize(); j ++)
+        {
+            if (fft.getBand(j) > fft.getBand(maxIndex))
+            {
+                maxIndex = j;
+                
+            }
+            c20 = map(i,0,fft.indexToFreq(maxIndex),0,255);
+            //stroke(255, fft.indexToFreq(i), 0);
+            stroke(c1,c20/8 ,255-c1);
+            //line(i,halfH - fft.getBand(i)*halfH, i, height/2);
+            //line(i,halfH, i, halfH - fft.getBand(i)  * 10);
+        }
+
+            //stroke(ab.get(i)%255);
+            //stroke(c20,c4,c1);
+            //stroke(255, 255-c20, 0);
+            k += 50;
+
+            //stars
+
+            line(i,halfH - ab.get(i)*k,i/2, halfH);
+            //i - i/2 and i/2 - i splits the screen to work accros each other
+            line(i/2,halfH - ab.get(i)*k,i, halfH);
+        
+            // end
+
+            //line(i, (halfH -100 + ab.get(i) * halfH/2), i, halfH -100);
+            //curvePoint(width/2, halfH + 10,halfH + 20, halfH+30, .5f);
+            //fill wheel
+            //arc(width/2, halfH, 200 , 200 ,0,6);
+           /* if(ab.get(i)>0)
+            {
+            arc(width/2, halfH, 200 , 200 ,0+ab.get(i)*200,6-ab.get(i)*200);
+            }
+            */
+
+
+            //cone
+             // if(ab.get(i) > 0)
+             // {
+            //    line(i, (halfH + ab.get(i) * halfH/2)-i, i, halfH + ab.get(i) * halfH/2);
+            
+            //  }
+
+
+            /*
+        
+           //og wave
+            stroke(200,200,20); //yellow
+            line(i, (halfH -100 + ab.get(i) * halfH/2), i, halfH -100);
+            //wavey scatter
+            stroke(20,0,200);
+            line(i, (halfH +100 + ab.get(i) * halfH/2)-15, i, halfH + 100+ ab.get(i) * halfH/2);
+            //wave with tips
+            //stroke(0,200,20);
+            //line(i, (halfH -200 + ab.get(i+1) * halfH/2), i, (halfH -200 + ab.get(i) * halfH/2));
+            
+            //stroke(200,50,50);//watermellon
+            //line(i, (halfH -200 ), i, halfH -200 + ab.get(i) * halfH/2);
+
+            stroke(100,200,100);
+            line(i,halfH + ab.get(i) * halfH/2,i,halfH+1);
+            */
+                /*
+          //COMBO WAVE
+          if(ab.get(i) > 0)
+         {
+          stroke(200,200,20); //yellow
+          line(i, (halfH -150 + ab.get(i) * halfH/2), i, halfH -150);
+         }
+
+         
+         if (ab.get(i) < 0 )
+         {
+            stroke(100,200,100);
+            line(i,halfH + 150 + ab.get(i) * halfH/2,i,halfH+ 150+1);
+        }*/
+    }
+
+        
+
+        
+        for(int i = 0 ; i < fft.specSize(); i ++)
+        {
+            stroke(255, fft.getBand(i)/1000, 0);
+            
+            
+        }
+    
+
+        
+
+        // Fill out missing code!!
+
+        float freq = fft.indexToFreq(maxIndex);
+
+        textSize(20);
+        fill(255);
+        text("Freq: " + freq, 100, 200);
+        
+
+    }        
+}

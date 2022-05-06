@@ -76,11 +76,12 @@ public class CubeVisual extends Visual
         }
         else
         {
-            rotateY(angle);
-            rotateX(angle);
-            //strokeWeight(1);
+            //rotateY(angle);
+            //rotateX(angle);
+            rotateZ(angle);
+            strokeWeight(150);
             //sphere(smoothedBoxSize/ 2);            
-            strokeWeight(5);
+            //strokeWeight(5);
             
             box(smoothedBoxSize);
         }
