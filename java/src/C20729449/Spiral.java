@@ -5,10 +5,6 @@ import ie.tudublin.Visual;
 
 public class Spiral extends Visual {
 
-
-    float smoothedBoxSize = 0;
-    float angle = 0;
-
     Visuals mv;
 
 
@@ -18,8 +14,8 @@ public class Spiral extends Visual {
     }
 
     public void draw() {
-        mv.camera();
-        mv.noStroke();
+        mv.camera();    //resets the camera
+        mv.noStroke();  
         mv.rect(0, 0, mv.width, mv.height);
         mv.noFill();
         mv.fill(-1, 10);

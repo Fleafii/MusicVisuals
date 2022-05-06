@@ -4,12 +4,8 @@ import ie.tudublin.Visual;
 
 public class RotatingBands extends Visual {
 
-
-    float smoothedBoxSize = 0;
-    float angle = 0;
-
     Visuals mv;
-    
+
     public RotatingBands(Visuals mv)
     {
         this.mv = mv;
@@ -20,6 +16,7 @@ public class RotatingBands extends Visual {
     float rot = 0;
 
     public void draw(){
+
         mv.calculateAverageAmplitude();
         
         mv.calculateFrequencyBands();

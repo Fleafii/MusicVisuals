@@ -7,9 +7,6 @@ public class Spectrum extends Visual {
     
     int radius = 150;
 
-    float smoothedBoxSize = 0;
-    float angle = 0;
-
     Visuals mv;
     float cy = 0;
     float cx = 0;
@@ -23,8 +20,7 @@ public class Spectrum extends Visual {
 
     public void draw() {
 
-        mv.background(0);
-        mv.camera();
+        mv.camera();    // resets the camera
         mv.noStroke();
         mv.rect(0, 0, mv.width, mv.height);
         mv.translate(mv.width/2, mv.height/2);

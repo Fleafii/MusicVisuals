@@ -5,9 +5,6 @@ import ie.tudublin.Visual;
 public class Circle extends Visual {
 
 
-    float smoothedBoxSize = 0;
-    float angle = 0;
-
     Visuals mv;
     
 
