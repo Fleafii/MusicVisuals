@@ -8,7 +8,7 @@ Name: Micolaj Chanas
 Student Number: C20724761
 
 # Video Of Our Visualisations
-
+[https://youtu.be/3xIj44_mM5E]
 
 
 # Description of the assignment
