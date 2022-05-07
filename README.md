@@ -8,7 +8,7 @@ Name: Mikolaj Chanas
 Student Number: C20724761
 
 # Video Of Our Visualisations
-[https://youtu.be/3xIj44_mM5E]
+![Visualiser Video Link](https://youtu.be/3xIj44_mM5E)
 
 
 # Description of the assignment
@@ -35,5 +35,5 @@ to the pattern and added rotation and color changes based on the audio input buf
  This was a bit hard at first to calculate the logic, but we managed to do it properly
  in the end. It also changes the cuboid height according to the audio input
 
- [rotating.bands](images/rotating_bands.png)
+ ![Rotating.Bands](images/rotating_bands.png)
 
